@@ -80,7 +80,7 @@ export function AgentsSection() {
             <Sparkles className="w-3 h-3 mr-1" />
             Features
           </Badge>
-          <h2 className="mb-4">Everything your operations team needs.</h2>
+          <h2 className="mb-4">Everything Your Operations Team Needs.</h2>
           {/* <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {agents.length} pre-configured AI agents trained on your company data — meetings, docs, projects, deals — so they have context a generic chatbot never will.
           </p> */}

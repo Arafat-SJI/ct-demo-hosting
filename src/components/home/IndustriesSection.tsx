@@ -47,7 +47,7 @@ export function IndustriesSection() {
             <Sparkles className="w-3 h-3 mr-1" />
             Industries
           </Badge>
-          <h2 className="mb-4">Built for industries where compliance and data privacy are non-negotiable.</h2>
+          <h2 className="mb-4">Built for Industries Where Compliance and Data Privacy Are Non-Negotiable.</h2>
           {/* <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Control Tower was built inside an agency. We know the pain of client work, billable hours, and managing 20 projects at once. That's why it works so well for professional services.
           </p> */}

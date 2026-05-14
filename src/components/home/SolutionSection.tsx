@@ -32,7 +32,7 @@ export function SolutionSection() {
             <Lightbulb className="w-3 h-3 mr-1" />
             Introducing Control Tower
           </Badge>
-          <h2 className="mb-4">One platform. Full visibility. AI doing the work.</h2>
+          <h2 className="mb-4">One Platform. Full Visibility. AI Doing the Work.</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
           Control Tower is an AI-powered operations platform built for regulated industries. It connects your data, your workflows, and your AI agents in one place — deployed privately inside your own infrastructure.
           </p>

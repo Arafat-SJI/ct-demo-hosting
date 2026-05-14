@@ -61,7 +61,7 @@ export function SecuritySection() {
             <Shield className="w-3 h-3 mr-1" />
             Security & Compliance
           </Badge>
-          <h2 className="mb-4">Your data. Your infrastructure. Your rules.</h2>
+          <h2 className="mb-4">Your Data. Your Infrastructure. Your Rules.</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Control Tower is designed from the ground up for regulated industries. We never store your data on our servers. Every deployment runs inside your own environment — private cloud, on-premise, or hybrid.
           </p>

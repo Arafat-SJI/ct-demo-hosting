@@ -59,7 +59,7 @@ export function ComparisonSection() {
             <Scale className="w-3 h-3 mr-1" />
             Packages
           </Badge>
-          <h2 className="mb-4">Simple pricing. Serious capability.</h2>
+          <h2 className="mb-4">Simple Pricing. Serious Capability.</h2>
           {/* <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We're not trying to replace every tool. We work <em>with</em> your existing stack. Here's the honest comparison:
           </p> */}

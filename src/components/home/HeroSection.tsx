@@ -72,7 +72,7 @@ export function HeroSection() {
         aria-hidden
       />
       <div className="section-inner relative z-10 px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <div className="grid w-full max-w-full grid-cols-1 items-start gap-x-10 gap-y-6 lg:grid-cols-2 lg:gap-x-14 lg:gap-y-5">
           {/* Left Column - Content */}
           <div>
             {/* Eyebrow */}
@@ -124,30 +124,14 @@ export function HeroSection() {
                 </a>
               </Button>
             </div>
-            <p className="mb-6 max-w-xl text-lg text-white/75">
-              Trusted by healthcare, mortgage, finance, and property management teams. No data leaves your infrastructure.
-            </p>
-            {/* <p className="text-xs text-muted-foreground mb-8">No signup required. See it working now.</p> */}
 
-            {/* Trust Badges */}
-            <div className="flex flex-wrap gap-3">
-              {trustBadges.map((badge) => (
-                <div
-                  key={badge.label}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/90"
-                >
-                  <badge.icon className="h-4 w-4 shrink-0 text-[#096AED]" />
-                  <span>{badge.label}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* Right Column - Tabbed Screenshot Preview */}
-          <div className="hidden lg:block">
-            {/* Tab Buttons */}
+          {/* Right Column — offset to align tabs / preview with first headline line (below eyebrow) */}
+          <div className="hidden w-full min-w-0 lg:block lg:pt-[calc(1.25rem+1.75rem+0.5rem)]">
+            {/* Tab Buttons — full width of preview below */}
             <div
-              className="inline-flex gap-1 rounded-xl border border-white/10 bg-white/5 p-1.5 shadow-sm backdrop-blur-sm mb-5"
+              className="mb-5 flex w-full gap-1 rounded-xl border border-white/10 bg-white/5 p-1.5 shadow-sm backdrop-blur-sm"
               role="tablist"
               aria-label="Product preview"
             >
@@ -158,20 +142,20 @@ export function HeroSection() {
                   role="tab"
                   aria-selected={activeTab === tab.id}
                   onClick={() => handleTabClick(tab.id)}
-                  className={`flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-bold transition-all duration-300 ${
+                  className={`flex min-w-0 flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2.5 text-sm font-bold transition-all duration-300 ${
                     activeTab === tab.id
                       ? "bg-[#096AED] text-white shadow-lg shadow-black/25"
                       : "text-white/60 hover:bg-white/10 hover:text-white"
                   }`}
                 >
-                  <tab.icon className={`h-4 w-4 transition-transform duration-300 ${activeTab === tab.id ? "scale-110" : ""}`} />
-                  {tab.label}
+                  <tab.icon className={`h-4 w-4 shrink-0 transition-transform duration-300 ${activeTab === tab.id ? "scale-110" : ""}`} />
+                  <span className="truncate">{tab.label}</span>
                 </button>
               ))}
             </div>
 
             {/* Screenshot Display */}
-            <div className="relative group">
+            <div className="relative group w-full">
               {/* Glow effect */}
               <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-[#096AED]/25 via-[#096AED]/10 to-[#096AED]/25 opacity-60 blur-2xl transition-opacity duration-500 group-hover:opacity-80" />
               
@@ -238,6 +222,24 @@ export function HeroSection() {
                 </div>
               </div>
             </div> */}
+          </div>
+
+          {/* Trust line + badges — full width of hero (spans both columns on lg) */}
+          <div className="col-span-full w-full">
+            <p className="mb-3 max-w-none text-lg leading-relaxed text-white/75">
+              Trusted by healthcare, mortgage, finance, and property management teams. No data leaves your infrastructure.
+            </p>
+            <div className="flex w-full flex-wrap gap-3">
+              {trustBadges.map((badge) => (
+                <div
+                  key={badge.label}
+                  className="inline-flex shrink-0 items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/90"
+                >
+                  <badge.icon className="h-4 w-4 shrink-0 text-[#096AED]" />
+                  <span>{badge.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

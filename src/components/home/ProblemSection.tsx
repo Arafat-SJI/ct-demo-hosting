@@ -41,7 +41,7 @@ export function ProblemSection() {
             <AlertTriangle className="w-3 h-3 mr-1" />
             Why Teams Choose Control Tower
           </Badge>
-          <h2 className="mb-4">Running operations on spreadsheets and gut feel doesn't work anymore.</h2>
+          <h2 className="mb-4">Running Operations on Spreadsheets and Gut Feel Doesn't Work Anymore.</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Your team is working hard. But the information is scattered — across emails, systems, and manual reports. Nobody has a full picture. Decisions take too long. And when regulators ask questions, nobody has the answers fast enough.
           </p>

@@ -16,7 +16,7 @@ export function FinalCTASection() {
           </div>
           
           {/* Headline */}
-          <h2 className="mb-4">Ready to put your operations under control?</h2>
+          <h2 className="mb-4">Ready to Put Your Operations Under Control?</h2>
 
           {/* Subheadline */}
           <p className="text-lg text-muted-foreground mb-8">
