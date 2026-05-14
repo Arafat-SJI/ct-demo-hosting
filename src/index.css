@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Design System: CollabAI Control Tower
+  Theme: Bold, marketable, trustworthy governance platform
+  
+  Color Philosophy:
+  - Vibrant teal primary for energy and trust
+  - Warm coral accent for CTAs and highlights
+  - Dark charcoal text for maximum readability
+  - Warm off-white backgrounds
+*/
+
+@layer base {
+  :root {
+    /* Warm off-white background */
+    --background: 50 20% 98%;
+    --foreground: 0 0% 12%;
+
+    /* Cards slightly warmer than background */
+    --card: 50 15% 96%;
+    --card-foreground: 0 0% 12%;
+
+    --popover: 50 20% 98%;
+    --popover-foreground: 0 0% 12%;
+
+    /* Vibrant Teal - bold, energetic, trustworthy */
+    --primary: 175 85% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light teal for secondary elements */
+    --secondary: 175 40% 92%;
+    --secondary-foreground: 175 85% 25%;
+
+    /* Muted tones for subtle elements */
+    --muted: 50 10% 92%;
+    --muted-foreground: 0 0% 40%;
+
+    /* Warm Coral accent for highlights and CTAs */
+    --accent: 20 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 50 20% 98%;
+
+    /* Soft borders */
+    --border: 50 10% 85%;
+    --input: 50 10% 85%;
+    --ring: 175 85% 35%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 50 15% 96%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 175 85% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 175 40% 92%;
+    --sidebar-accent-foreground: 0 0% 12%;
+    --sidebar-border: 50 10% 85%;
+    --sidebar-ring: 175 85% 35%;
+
+    /* Custom tokens */
+    --teal: 175 85% 35%;
+    --teal-light: 175 70% 95%;
+    --teal-dark: 175 90% 25%;
+    --coral: 20 85% 55%;
+    --coral-light: 20 70% 90%;
+    --charcoal: 0 0% 12%;
+    --charcoal-light: 0 0% 40%;
+    --cream: 50 20% 98%;
+    --cream-dark: 50 15% 92%;
+    
+    /* Warning color for traffic lights */
+    --warning: 45 93% 47%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 50 15% 92%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 50 15% 92%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 50 15% 92%;
+
+    --primary: 175 75% 45%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 50 15% 92%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 50 10% 60%;
+
+    --accent: 20 80% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 50 15% 92%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 175 75% 45%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 50 15% 85%;
+    --sidebar-primary: 175 75% 45%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 50 15% 92%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 175 75% 45%;
+
+    --teal: 175 75% 45%;
+    --teal-light: 175 30% 20%;
+    --teal-dark: 175 75% 60%;
+    --coral: 20 80% 50%;
+    --coral-light: 20 40% 20%;
+    --charcoal: 50 15% 92%;
+    --charcoal-light: 50 10% 60%;
+    --cream: 0 0% 8%;
+    --cream-dark: 0 0% 12%;
+    
+    --warning: 45 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  /* Bold typography for impact */
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl leading-snug;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Enhanced document-style card with hover glow */
+  .document-card {
+    @apply bg-card border border-border rounded-xl p-5 transition-all duration-300;
+  }
+
+  .document-card:hover {
+    @apply border-primary/40 shadow-lg shadow-primary/10;
+  }
+
+  /* Vertical padding for stacked sections (single source: adjacent sections sum top+bottom) */
+  .section {
+    @apply py-8 md:py-10;
+  }
+
+  /* Consistent space between header / body blocks inside a section (replaces ad-hoc mb-10 / mb-12) */
+  .section-inner {
+    @apply max-w-7xl mx-auto w-full flex flex-col gap-10 md:gap-10;
+  }
+
+  /* Subtle link style */
+  .link-subtle {
+    @apply text-muted-foreground hover:text-foreground transition-colors duration-200;
+  }
+
+  /* Enhanced trust badge style */
+  .trust-badge {
+    @apply inline-flex items-center gap-2 text-sm font-medium text-foreground bg-primary/10 px-4 py-2 rounded-full border border-primary/20;
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease_infinite];
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+
+  /* Accent button glow */
+  .btn-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-glow::before {
+    @apply absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 transition-opacity duration-300;
+    content: "";
+  }
+
+  .btn-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Icon container with gradient */
+  .icon-container {
+    @apply w-16 h-16 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center border border-primary/10;
+  }
+
+  /* Numbered badge */
+  .number-badge {
+    @apply w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center;
+  }
+}
+
+@layer utilities {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Gradient animation */
+  @keyframes gradient {
+    0%, 100% {
+      background-position: 0% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+  }
+}
